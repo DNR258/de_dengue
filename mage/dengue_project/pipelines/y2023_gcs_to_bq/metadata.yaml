@@ -3,7 +3,7 @@ blocks:
   color: null
   configuration: {}
   downstream_blocks:
-  - stored_y2023_data_transformer
+  - y2023_gcs_to_bq_transformer
   executor_config: null
   executor_type: local_python
   has_callback: false
@@ -19,19 +19,19 @@ blocks:
   color: null
   configuration: {}
   downstream_blocks:
-  - stored_y2023_data_exporter
+  - y2023_gcs_to_bq_exporter
   executor_config: null
   executor_type: local_python
   has_callback: false
   language: python
-  name: stored_y2023_data_transformer
+  name: y2023_gcs_to_bq_transformer
   retry_config: null
   status: executed
   timeout: null
   type: transformer
   upstream_blocks:
   - y2023_gcs_to_bq_loader
-  uuid: stored_y2023_data_transformer
+  uuid: y2023_gcs_to_bq_transformer
 - all_upstream_blocks_executed: true
   color: null
   configuration:
@@ -55,14 +55,14 @@ blocks:
   executor_type: local_python
   has_callback: false
   language: sql
-  name: stored_y2023_data_exporter
+  name: y2023_gcs_to_bq_exporter
   retry_config: null
   status: executed
   timeout: null
   type: data_exporter
   upstream_blocks:
-  - stored_y2023_data_transformer
-  uuid: stored_y2023_data_exporter
+  - y2023_gcs_to_bq_transformer
+  uuid: y2023_gcs_to_bq_exporter
 cache_block_output_in_memory: false
 callbacks: []
 concurrency_config: {}

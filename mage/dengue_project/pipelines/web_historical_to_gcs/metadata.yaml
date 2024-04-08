@@ -3,35 +3,35 @@ blocks:
   color: null
   configuration: {}
   downstream_blocks:
-  - historical_data_transformer
+  - web_to_gcs_hist_transformer
   executor_config: null
   executor_type: local_python
   has_callback: false
   language: python
-  name: historical_data_loader
+  name: web_to_gcs_hist__data_loader
   retry_config: null
   status: executed
   timeout: null
   type: data_loader
   upstream_blocks: []
-  uuid: historical_data_loader
+  uuid: web_to_gcs_hist__data_loader
 - all_upstream_blocks_executed: true
   color: null
   configuration: {}
   downstream_blocks:
-  - historical_data_exporter
+  - web_to_gcs_hist_exporter
   executor_config: null
   executor_type: local_python
   has_callback: false
   language: python
-  name: historical_data_transformer
+  name: web_to_gcs_hist_transformer
   retry_config: null
   status: executed
   timeout: null
   type: transformer
   upstream_blocks:
-  - historical_data_loader
-  uuid: historical_data_transformer
+  - web_to_gcs_hist__data_loader
+  uuid: web_to_gcs_hist_transformer
 - all_upstream_blocks_executed: true
   color: null
   configuration: {}
@@ -40,14 +40,14 @@ blocks:
   executor_type: local_python
   has_callback: false
   language: python
-  name: historical_data_exporter
+  name: web_to_gcs_hist_exporter
   retry_config: null
   status: executed
   timeout: null
   type: data_exporter
   upstream_blocks:
-  - historical_data_transformer
-  uuid: historical_data_exporter
+  - web_to_gcs_hist_transformer
+  uuid: web_to_gcs_hist_exporter
 cache_block_output_in_memory: false
 callbacks: []
 concurrency_config: {}
