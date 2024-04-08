@@ -1,0 +1,86 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - hist_gcs_to_bq_transformer
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: hist_gcs_to_bq_loader
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: hist_gcs_to_bq_loader
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - hist_gcs_to_bq_exporter
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: hist_gcs_to_bq_transformer
+  retry_config: null
+  status: updated
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - hist_gcs_to_bq_loader
+  uuid: hist_gcs_to_bq_transformer
+- all_upstream_blocks_executed: false
+  color: null
+  configuration:
+    data_provider: bigquery
+    data_provider_profile: default
+    data_provider_schema: dengue_data
+    data_provider_table: hist_world_dengue_data
+    dbt: {}
+    disable_query_preprocessing: false
+    export_write_policy: append
+    limit: 1000
+    upstream_block_configuration:
+      hist_gcs_to_bq_transformer:
+        table_name: ''
+    use_raw_sql: false
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: sql
+  name: hist_gcs_to_bq_exporter
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_loader
+  upstream_blocks:
+  - hist_gcs_to_bq_transformer
+  uuid: hist_gcs_to_bq_exporter
+cache_block_output_in_memory: false
+callbacks: []
+concurrency_config: {}
+conditionals: []
+created_at: '2024-04-05 22:11:06.534069+00:00'
+data_integration: null
+description: null
+executor_config: {}
+executor_count: 1
+executor_type: null
+extensions: {}
+name: historical_gcs_to_bq
+notification_config: {}
+remote_variables_dir: null
+retry_config: {}
+run_pipeline_in_one_process: false
+settings:
+  triggers: null
+spark_config: {}
+tags: []
+type: python
+uuid: historical_gcs_to_bq
+variables_dir: /home/src/mage_data/dengue_project
+widgets: []
