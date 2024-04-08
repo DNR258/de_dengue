@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: staging
+    database: elaborate-tube-412620
+    schema: dengue_data
+    tables:
+      - name: hist_world_dengue_data
+      - name: y2023_arg_dengue_data
