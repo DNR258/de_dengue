@@ -13,14 +13,14 @@ src AS (
     CAST(d AS DATE) AS Date,
     EXTRACT(day FROM  d) AS Day,
     FORMAT_DATE('%A', d) AS dow, 
-    FORMAT_DATE('%V', d) AS EpiWeekM, 
-	FORMAT_DATE('%V', e) AS EpiWeekS, 
-	FORMAT_DATE('%u', d) AS DayOfWeek,
-    FORMAT_DATE('%m', d) AS Month,
+    cast(FORMAT_DATE('%V', d) as integer) AS EpiWeekM, 
+	cast(FORMAT_DATE('%V', e) as integer) AS EpiWeekS, 
+	cast(FORMAT_DATE('%u', d) as integer) AS DayOfWeek,
+    cast(FORMAT_DATE('%m', d) as integer) AS Month,
     FORMAT_DATE('%B', d) AS MonthName,
-    FORMAT_DATE('%Q', d) AS Quarter,
-    EXTRACT(year FROM d) AS Year,
-    FORMAT_DATE('%j', d) AS DayOfYear
+    cast(FORMAT_DATE('%Q', d) as integer) AS Quarter,
+    cast(EXTRACT(year FROM d) as integer) AS Year,
+    cast(FORMAT_DATE('%j', d) as integer) AS DayOfYear
    FROM de
 )
 SELECT *
