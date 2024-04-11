@@ -24,8 +24,8 @@ renamed as (
         t_res as time_resolution,
 
         --timestamps
-        calendar_start_date as start_month,
-        calendar_end_date as end_month,
+        cast(calendar_start_date as date) as start_month,
+        cast(calendar_end_date as date) as end_month,
 
         --recorded cases
         dengue_total as dengue_cases
