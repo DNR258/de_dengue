@@ -7,3 +7,4 @@ sources:
     tables:
       - name: hist_world_dengue_data
       - name: y2023_arg_dengue_data
+      - name: iso_sun_calendar
