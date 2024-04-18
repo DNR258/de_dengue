@@ -30,3 +30,4 @@ The data pipeline pulls Dengue data from two different sources, loads it into GC
 To reproduce this pipeline just follow the instructions.
 
 ## Visualizations
+[Dengue_Report.pdf](https://github.com/DNR258/de_dengue/files/15029639/Dengue_Report.pdf)
