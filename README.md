@@ -4,12 +4,12 @@ Data pipeline for Dengue data visualization
 ## Technologies
 In this project I used:
 
-Terraform as Infrastructure-as-Code (IaC) for cloud setup,
-Mage AI for orchestration,
-Google Cloud Storage (GCS) as data lake for data storage,
-Google BigQuery as Data Warehouse,
-dbt for the transformation of data the data,
-Google Looker studio for visualizations.
+- Terraform as Infrastructure-as-Code (IaC) for cloud setup,
+- Mage AI for orchestration,
+- Google Cloud Storage (GCS) as data lake for data storage,
+- Google BigQuery as Data Warehouse,
+- dbt for the transformation of data the data,
+- Google Looker studio for visualizations.
 
 The data pipeline pulls Dengue data from two different sources, loads it into Google Cloud Storage and then into BigQuery using Mage. After that, the data is transformed inside the data warehouse with dbt, and visualized in Looker Studio:
 
