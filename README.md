@@ -34,5 +34,5 @@ Data sources differs in how the data is presented and show some heterogeneity in
 To reproduce this pipeline just follow the instructions.
 
 ## Visualizations
-The dashboard [can be found here]([https://lookerstudio.google.com/reporting/6f2401c9-9622-4bc6-8b37-e68a8c0879cc](https://lookerstudio.google.com/reporting/e7dd5962-a277-443a-a2bf-6bd6ed124200)).
+The dashboard [can be found here]([https://lookerstudio.google.com/reporting/6f2401c9-9622-4bc6-8b37-e68a8c0879cc](https://lookerstudio.google.com/reporting/e7dd5962-a277-443a-a2bf-6bd6ed124200).
 ![report](https://github.com/DNR258/de_dengue/assets/97068501/76a50cb4-662e-48fe-9078-6eccf12fb78d)
